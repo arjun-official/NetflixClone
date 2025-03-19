@@ -1,0 +1,412 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+   
+}
+
+* a{
+    color: white;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+}
+
+.backgroundContainer{
+    background-image: url("images/bannerImage.jpg");
+    filter: blur(16px);
+    height: 100vh;
+    position: relative;
+}
+
+.pinkOverlay{
+    background-color: rgba(104, 3, 20, 0.404);
+    height: 100%;
+    width: 100%;
+}
+
+.contentContainer{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0rem 2rem;
+}
+
+nav{
+    /* border: 2px solid green; */
+    height: 20vh;
+    position: fixed;
+    z-index: 10000;
+}
+
+.upperNavbarSection{
+    /* border: 2px solid blue; */
+    display: flex;
+    height: 50%;
+}
+
+.upperNavbarLeftSection{
+    /* border: 2px solid red; */
+    width: 50%;
+
+}
+
+.netflixLogo{
+    width: 30%;
+}
+
+.upperNavbarRightSection{
+    /* border: 2px solid green; */
+    width: 50%;
+}
+
+.navBarButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* border: 2px solid green; */
+    height: 100%;
+}
+
+.languageButton{
+    display: flex;
+    padding: .4rem .8rem;
+    border-radius: 50px;
+    background: transparent;
+    border: 1px solid white;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+
+}
+
+.signinButton{
+    background-color: #fff;
+    padding: .4rem .8rem;
+    border-radius: 50px;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    font-size: 1rem;
+
+}
+
+.languageButton p{
+    margin-left: 5px;
+}
+
+.lowerNavbarSection{
+    /* border: 2px solid red; */
+    height: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.menuList{
+    /* border: 2px solid green; */
+    width: 40%;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background: rgba(0,0,0,.7);
+    box-shadow: 2px 3px 14px rgba(0, 0, 0, .5);
+    backdrop-filter: blur(7px);
+    height: 7vh;
+}
+
+.menuList li{
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sectionsContainer{
+    margin-top: 20vh;
+}
+
+.bannerSection{
+    /* border: 2px solid red; */
+    height: 90vh;
+    background-image: url("images/bannerImage.jpg");
+    background-size: 100% 100%;
+    border-radius: 20px;
+    position: relative;
+}
+
+.overlay{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient( rgba(0,0,0,.3),rgba(0,0,0,.7), black );
+    border-radius: 20px;
+
+}
+
+.bannerContainer{
+    /* border: 2px solid red; */
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+}
+
+.bannerContainer h2{
+    font-size: 4rem;
+    width: 50%;
+    text-align: center;
+}
+
+.bannerContainer h4{
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.bannerContainer p{
+    font-size: 1rem;
+    margin: 20px;
+}
+
+.inputContainer{
+    /* border: 2px solid green; */
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.emailInputBox{
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 60%;
+    color: white;
+    font-size: 1rem;
+}
+
+.emailInputBox::placeholder{
+    color: white;
+}
+
+.getStartedButton{
+    width: 30%;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.carouselSection, 
+.planSection,
+.reasonToJoinSection,
+.faqSection,
+.getStartedSection{
+    /* border: 2px solid red; */
+    color: white;
+    
+}
+
+.carouselSection h2,
+.planSection h2,
+.reasonToJoinSection h2,
+.faqSection h2{
+    /* border: 2px solid red; */
+    margin-left: 5rem;
+    font-size: 2.5rem;
+}
+
+.carouselCardConatiner,
+.plansConatiner,
+.reasonsConatiner,
+.faqCardsContainer{
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 90%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    justify-content: space-evenly;
+    margin: 2rem auto;
+}
+
+
+.carouselCard{
+    width: 12%;
+    
+    /* border: 2px solid yellow; */
+    height: 38vh;
+    border-radius: 20px;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carouselNumberContainer{
+    position: absolute;
+    left: -20px;
+}
+
+.carouselNumberContainer span{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.125rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 4rem;
+}
+
+.carouselImageContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.carouselImageContainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.planCard, .reasonCard{
+    /* border: 2px solid green; */
+    height: 38vh;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1rem 1rem;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.372);
+
+}
+
+.planCard1{
+    background: linear-gradient(149deg, #1C4072 6.96%, #172B47 40.17%, #120c1f 73.39%);
+}
+
+.planCard2{
+    background: linear-gradient(149deg, #1D529D 6.96%, #233371 40.17%, #120c1f 73.39%);
+}
+
+.planCard3{
+    background: linear-gradient(149deg, #792A95 6.96%, #38216C 40.17%, #120c1f 73.39%);
+}
+
+.planCard4{
+    background: linear-gradient(149deg, #922556 6.96%, #391945 40.17%, #120c1f 73.39%);
+}
+
+.planCard h2{
+    margin-left: 0;
+    font-size: 1.5rem;
+}
+
+.planCard h4{
+    font-size: 1.2rem;
+}
+
+.planCard p{
+    font-size: 0.92rem;
+}
+
+.reasonCard{
+    background: rgb(47, 47, 47);
+    border: none;
+    height: 32vh;
+    border-radius: 20px;
+    display: flex;
+   
+}
+
+.reasonCard h2{
+    font-size: 1.5rem;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.reasonCard p{
+    font-size: 0.9rem;
+}
+
+.reasonCardLowerContent{
+    display: flex;
+    justify-content: end;
+}
+
+.reasonCardLowerContent svg{
+    height: 50px;
+    width: 50px;
+}
+
+.faqCard{
+    /* border: 2px solid red; */
+    width: 90%;
+}
+
+.faqQuestion,
+.faqAnswer{
+    padding: 2rem;
+    border-radius: 10px;
+    /* border: 1px solid white; */
+    margin-bottom: 20px;
+    background-color: #2e2e2e;
+}
+
+.faqQuestion{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faqQuestion span{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.faqAnswer {
+    display: none;
+
+}
+
+.faqCard:hover{
+    cursor: pointer;
+}
+
+/* Jab faqQuestion p hover ho toh faqAnswer dikh jaye */
+.faqCard:hover .faqAnswer {
+    display: block;
+    cursor: pointer;
+}
+
+.faqCardsContainer{
+    flex-direction: column;
+}
+
+.getStartedSection{
+    padding:none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.getStartedSection p{
+    margin-bottom: 1rem
+}
+.carouselCardContainer.active .carouselCard {
+    transform: translateX(-100%);
+}
+.carouselSectionh2{
+    color: thistle;
+}
